@@ -1,0 +1,159 @@
+.block-content--left {
+	padding: 240px 0 0 180px;
+	.block-content__description {
+		width: 444px;
+	}
+}
+.block-content--right {
+	margin-left: 45%;
+	padding: 180px 200px 0 0;
+	.block-content__title {
+		margin-left: 100px;
+		 justify-content: flex-end;
+	}
+	.block-content__description {
+		width: 600px;
+		flex-wrap: wrap;
+	}
+}
+// почитать про специфичность селекторов
+.networcks-menu {
+	display: flex;
+    justify-content: center;
+    margin: 50px 0 0px 80px;
+	.networcks-menu__item {
+		display: inline-block;
+		&:not(:last-child) {
+			margin-right: 30px;
+		}
+	}
+}
+.networcks-menu__link {
+	display: inline-block;
+	width: 33px;
+	height: 33px;
+	background-repeat: no-repeat;
+	background-position: center;
+	background-color: #909090;
+	&:hover{
+		background-color: @colorBlack;
+	}
+}
+.networcks-menu__link.facebook{
+	background-image: url(../img/Fb.png);
+}
+.networcks-menu__link.instagram{
+	background-image: url(../img/inteligentny-obiekt-wektorowy.png);
+}
+.networcks-menu__link.twitte{
+	background-image: url(../img/twiter.png);
+}
+.networcks-menu__link.pinterest{
+	background-image: url(../img/pin.png);
+}
+// заголовок-начало
+.block-content__title {
+	font-size: 50px;
+	font-family: 'Raleway';
+	color: @colorTitle;
+	margin-bottom: 20px;
+	span {
+		font-weight: bold;
+		color: @colorBlack;
+	}
+}
+// заголовок конец
+
+// описание-начало
+.block-content__description {
+	font-family: 'LMRomanSlant10';
+	font-size: 25px;
+	color: @colorText;
+	line-height: 25px;
+}
+// описание-конец
+
+// cлайдер
+.main-block--slider {
+	position: relative;
+	&:before {
+		content: url(../img/o-kopia.png);
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 440px;
+		height: 750px;
+		z-index: 10;
+	}
+}
+.slider-button {
+	.buttom;
+	&--next {
+		right: 80px;
+		background-image: url(../img/grupa-4.png);
+	}
+	&--prew {
+		left: 80px;
+		background-image: url(../img/left.png);
+	}
+}
+
+// Второй блок слайдеров
+.block-slider__main {
+	position: absolute;
+	// переделать на фиксированный топ и право
+    top: 20%;
+    right: 27%;
+}
+.block-slider__prew {
+	margin-top: 200px;
+	margin-left: 130px;
+}
+.block-slider__next {
+	margin-left: 180px;
+}
+// Слайдеры конец
+
+// Блок с формой
+.block-content--center{
+	text-align: center;
+    width: 1200px;
+    padding-top: 100px;
+    margin: auto;
+}
+// Форма
+.say-hello{
+	display: flex;
+	justify-content: space-between;
+	flex-wrap: wrap;
+	width: 500px;
+	margin: auto; 
+	padding-top: 50px;
+	// пересмотреть как не писать всю эту лапшу с классами ЛЕСС
+	.say-hello__mail,
+	.say-hello__sub,
+	.say-hello__message{
+		border: 1px solid @colorBlack; 
+		margin-bottom: 20px;
+		padding: 10px; 
+		height: 40px;
+	}
+	.say-hello__mail,
+	.say-hello__sub,{
+		width: 240px;
+	}
+	.say-hello__message{
+		margin-top: 20px;
+		width: 100%;
+		height: 100px;
+	}
+	.say-hello__send{
+		margin: auto;
+		background-color:  @colorBlack;
+		color: @colorWhite;
+		height: 30px;
+		width: 100%;
+		height: 40px;
+		cursor: pointer;
+	}
+}
